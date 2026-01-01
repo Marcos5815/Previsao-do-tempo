@@ -7,7 +7,7 @@ export const useWeather = () => {
         const [loading, setLoading] = useState(true)
     
         useEffect(() => {
-            HTTP.get('/weather')
+            HTTP.get('/weather?format=json-hook&woeid=455827')
             .then(response => {
                 setWeather(response.data.results)
                 console.log(response.data.results)
