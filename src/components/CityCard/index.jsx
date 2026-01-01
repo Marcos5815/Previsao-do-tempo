@@ -4,13 +4,13 @@ export const CityCard = () => {
 
     const {weather, loading} = useWeather()
 
-    if(loading) {
+    if(loading || !weather) {
         return console.log("The API is loading")
     }
 
     return (
         <div className="bg-transparent flex justify-center items-center h-6">
-            <p className="text-[20px] font-semibold text-white-text">{weather.city}</p>
+            <p className="text-[20px] font-semibold text-white-text">{weather?.city}</p>
         </div>
     )
 }

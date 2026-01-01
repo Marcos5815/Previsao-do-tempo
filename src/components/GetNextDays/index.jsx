@@ -21,12 +21,12 @@ export const GetNextDays = () => {
     }
 
 
-    if(loading) {
+    if(loading || !weather) {
         console.log("The API is loading")
     }
 
 
-    const iconPath = getWeatherIcon(weather.condition_slug)
+    const iconPath = getWeatherIcon(weather?.condition_slug)
 
 
 
