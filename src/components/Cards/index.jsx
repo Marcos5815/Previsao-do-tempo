@@ -1,23 +1,26 @@
+import { WeatherNextDays } from "../WeatherNextDays"
 import { WeatherToday } from "../WeatherToday"
 
 const Card = ({ children }) => {
     return (
-        <div className="max-w-full">{children}</div>
+        <div className="">{children}</div>
     )
 }
 
 export const CardToday = () => {
     return(
-        <div className="bg-violet-secondary p-4 rounded-3xl">
+        <div className="bg-violet-secondary p-4 rounded-3xl w-82 h-74 ">
             <WeatherToday />
         </div>
     )
 }
 
 
-export const CardNextDays = () => {
+export const CardNextDays = ({ day, date, min, max, icon }) => {
     return(
-        <div className="bg-white-text opacity-15 rounded-2xl py-4 px-8">Test test test</div>
+        <div className="bg-white-text/15 rounded-2xl">
+            <WeatherNextDays day={day} date={date} min={min} max={max} icon={icon} />
+        </div>
     )
 }
 

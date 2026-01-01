@@ -21,10 +21,10 @@ export const WeatherToday = () => {
         <div className="text-white-text flex flex-col gap-7">
             <div className="flex flex-col justify-center items-center">
                 <p className="font-semibold">{`Hoje (${today})`}</p>
-                <div className="w-24 h-16">
+                <div className="w-24 h-16 p-2">
                     <img src={iconPath} alt={weather.description} />
                 </div>
-                <p className="text-[43px] font-bold pt-2">{weather.temp}°</p>
+                <p className="text-[43px] font-bold py-2">{weather.temp}°</p>
                 <p className="text-[13px] leading-[120%]">{weather.description}</p>
             </div>
             <div className="flex flex-col gap-2.5">

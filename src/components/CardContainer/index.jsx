@@ -1,14 +1,13 @@
+import { GetNextDays } from "../GetNextDays"
 import Card from "../Cards"
 
+
 export const CardContainer = () => {
+
     return (
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 justify-center items-center">
             <Card.Today />
-            <div className="flex gap-2">
-                <Card.nextDays />
-                <Card.nextDays />
-                <Card.nextDays />
-            </div>
+            <GetNextDays />
         </div>
     )
 }
