@@ -1,3 +1,5 @@
+import { WeatherToday } from "../WeatherToday"
+
 const Card = ({ children }) => {
     return (
         <div className="max-w-full">{children}</div>
@@ -6,7 +8,9 @@ const Card = ({ children }) => {
 
 export const CardToday = () => {
     return(
-        <div className="bg-violet-secondary p-4 rounded-3xl">test</div>
+        <div className="bg-violet-secondary p-4 rounded-3xl">
+            <WeatherToday />
+        </div>
     )
 }
 
