@@ -1,6 +1,9 @@
 import { IconSearch } from "../icons";
+import type { ComponentPropsWithoutRef } from "react";
 
-export const SearchBar = ({ ...props }) => {
+interface SearchBarProps extends ComponentPropsWithoutRef<'input'>{}
+
+export const SearchBar = ({ ...props }: SearchBarProps) => {
   return (
     <div className="
         w-82 h-9 px-4 py-4

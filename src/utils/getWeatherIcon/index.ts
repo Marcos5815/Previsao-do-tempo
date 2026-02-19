@@ -12,7 +12,7 @@ import snow from '../../components/IconsWeather/snow.svg'
 import storm from '../../components/IconsWeather/storm.svg'
 
 
-const iconMap = {
+const iconMap: Record<string, string> = {
     "clear_day": clearDay,
     "clear_night": clearNight,
     "cloud": cloud,
@@ -27,6 +27,6 @@ const iconMap = {
     "storm": storm,
 }
 
-export const getWeatherIcon = (slug) => {
+export const getWeatherIcon = (slug: string) => {
     return iconMap[slug] || clearDay;
 }

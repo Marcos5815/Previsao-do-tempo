@@ -1,4 +1,14 @@
-export const WeatherNextDays = ({ day, date, min, max, icon }) => {
+
+interface WeatherProps  {
+  day: string | number;
+  date: string | undefined;
+  min: number | undefined;
+  max: number | undefined;
+  icon: string | undefined;
+}
+
+
+export const WeatherNextDays = ({ day, date, min, max, icon }: WeatherProps) => {
 
 
 

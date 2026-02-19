@@ -1,16 +1,18 @@
 import { useEffect, useState } from "react"
 import { HTTP } from "../../API"
+import type { Weather } from '../../../types/Weather';
 
 export const useWeather = () => {
+
+
     
-        const [weather, setWeather] = useState(null)
-        const [loading, setLoading] = useState(true)
+        const [weather, setWeather] = useState<Weather | null>(null)
+        const [loading, setLoading] = useState<boolean>(true)
     
         useEffect(() => {
-            HTTP.get('/weather?format=json-hook&woeid=455827')
+            HTTP.get<{ results: Weather}>('/weather?format=json-hook&woeid=455827')
             .then(response => {
                 setWeather(response.data.results)
-                console.log(response.data.results)
                 setLoading(false)
     
             })

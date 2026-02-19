@@ -7,11 +7,12 @@ export const WeatherToday = () => {
     const {weather, loading} = useWeather()
 
     if(loading || !weather) {
-        return console.log("Api loading")
+        console.log("Api loading")
+        return <p>Carregando...</p>
     }
 
-    const iconPath = getWeatherIcon(weather?.condition_slug)
-    const today = weather?.forecast[0].date
+    const iconPath: string = getWeatherIcon(weather?.condition_slug)
+    const today: string = weather?.forecast[0].date
 
 
     return (

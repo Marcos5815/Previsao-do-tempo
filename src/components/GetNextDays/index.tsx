@@ -5,18 +5,19 @@ import { getWeatherIcon } from "../../utils/getWeatherIcon";
 
 export const GetNextDays = () => {
 
-    const days = []
+
+    const days: string[] = []
     const {weather, loading} = useWeather()
 
     for(let i = 1; i <= 3; i++) {
         const date = new Date()
         date.setDate(date.getDate() + i);
-        const weekday = date.toLocaleDateString("pt-BR", {
+        const weekday: string = date.toLocaleDateString("pt-BR", {
             timeZone: "America/Sao_Paulo",
             weekday: "long",
         })
 
-        const capitalized = weekday.charAt(0).toUpperCase() + weekday.slice(1);
+        const capitalized: string = weekday.charAt(0).toUpperCase() + weekday.slice(1);
         days.push(capitalized);
     }
 
@@ -26,7 +27,7 @@ export const GetNextDays = () => {
     }
 
 
-    const iconPath = getWeatherIcon(weather?.condition_slug)
+    const iconPath: string = getWeatherIcon(weather?.condition_slug!)
 
 
 
